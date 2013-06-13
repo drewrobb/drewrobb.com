@@ -1,60 +1,54 @@
-<!DOCTYPE html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Home</title>
-    <meta name="description" content />
-    <meta name="viewport" content="width=device-width" />
-    <link type="image/png" rel="icon" href="./images/favicon.png" />
-    <link type="text/css" rel="stylesheet" href="./css/bootstrap.css" />
-    <link type="text/css" rel="stylesheet" href="./css/main.css" />
-  </head>
-  <body>
-    <div class="container">
-      <nav class="navbar">
-        <div class="navbar-inner">
-          <ul class="nav">
-            <li><a href="./">drewrobb.com</a></li>
-            <li><a href="./about/">about</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      <div id="content">
-        <ul class="posts">
-  <li>
-  <article>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>drewrobb.com: blog</title>
+    <link href="http://drewrobb.com/atom.xml" rel="self" />
+    <link href="http://drewrobb.com" />
+    <id>http://drewrobb.com/atom.xml</id>
+    <author>
+        <name>Drew Robb</name>
+        <email>drewrobb@gmail.com</email>
+    </author>
+    <updated>2013-06-07T00:00:00Z</updated>
+    <entry>
+    <title>One Year of Running</title>
+    <link href="http://drewrobb.com/posts/one/year/running.md/" />
+    <id>http://drewrobb.com/posts/one/year/running.md/</id>
+    <published>2013-06-07T00:00:00Z</published>
+    <updated>2013-06-07T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<article>
   <header>
     <h1 class="entry-title">
-      <a href="./posts/one/year/running.md/">One Year of Running</a>
+      <a href="/posts/one/year/running.md/">One Year of Running</a>
     </h1>
     <div class="meta">
       <time datetime="2013-06-07" pubdate data-updated="true"> 7 June 2013</time>
-      <div class="tags"><a href="./tags/running/">running</a> | <a href="./tags/personal/">personal</a></div>
+      <div class="tags"><a href="/tags/running/">running</a> | <a href="/tags/personal/">personal</a></div>
     </div>
   </header>
 
   <p>About one year ago, for the first time in recent memory, I went on a run. I now have a lot of running data! I also almost always run with a heartrate monitor.</p>
 <p>The graph below represents my progress. Each point is a single run that was between 3 and 8 miles without signficant elevation gain and with a reasonably low standard deviation in pace. For each run, I calculate my mean pace over all 1 mile continuous subsections of the run where my mean heart rate was within the range [165, 180] (typical moderate-hard effort for me). This gives a crude measurement of the pace that I’m able to sustain at a given heart rate.</p>
 <figure>
-<img src="./images/pace_running_regression.png" />
+<img src="/images/pace_running_regression.png" />
 </figure>
 <p>There are only about 50 runs shown, because I don’t always have a heart rate monitor, and I’ve filtered many of the runs. A simple linear fit of the data gives a slope of ~1.7 seconds/(week * mile). I’m getting faster by almost two seconds a mile every week. You might also notice that 45ish weeks is less than a year, this is because I did not record data initially.</p>
-
-
-  <div class="continue-link"><a href="./posts/one/year/running.md/">Continue reading »</a></div>
 </article>
-
-</li>
-<li>
-  <article>
+]]></summary>
+</entry>
+<entry>
+    <title>Hakyll Beginnings</title>
+    <link href="http://drewrobb.com/posts/hakyll/intro.md/" />
+    <id>http://drewrobb.com/posts/hakyll/intro.md/</id>
+    <published>2013-05-15T00:00:00Z</published>
+    <updated>2013-05-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<article>
   <header>
     <h1 class="entry-title">
-      <a href="./posts/hakyll/intro.md/">Hakyll Beginnings</a>
+      <a href="/posts/hakyll/intro.md/">Hakyll Beginnings</a>
     </h1>
     <div class="meta">
       <time datetime="2013-05-15" pubdate data-updated="true">15 May 2013</time>
-      <div class="tags"><a href="./tags/hakyll/">hakyll</a> | <a href="./tags/programming/">programming</a> | <a href="./tags/blog/">blog</a></div>
+      <div class="tags"><a href="/tags/hakyll/">hakyll</a> | <a href="/tags/programming/">programming</a> | <a href="/tags/blog/">blog</a></div>
     </div>
   </header>
 
@@ -104,27 +98,8 @@ ghc --make site.hs  4.28s user 0.51s system 99% cpu 4.823 total</code></pre>
 Linking site ...
 ghc --make -dynamic site.hs  1.10s user 0.13s system 98% cpu 1.257 total</code></pre>
 <p>It was almost 4 times faster, and the binary is now only 116kB. Success.</p>
-
-
-  <div class="continue-link"><a href="./posts/hakyll/intro.md/">Continue reading »</a></div>
 </article>
+]]></summary>
+</entry>
 
-</li>
-
-</ul>
-
-      </div>
-
-      <footer role="contentinfo">
-        <p>
-          Copyright © 2013 <a href="./about/">Drew Robb</a>
-          <span class="credit">Powered by <a href="http://jaspervdj.be/hakyll/">Hakyll</a></span>
-        </p>
-      </footer>
-    </div>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-    <script src="./js/vendor/bootstrap.min.js"></script>
-  </body>
-</html>
+</feed>

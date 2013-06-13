@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>drewrobb.com: Posts tagged hakyll</title>
+    <link href="http://drewrobb.com/tags/hakyll/index.xml" rel="self" />
+    <link href="http://drewrobb.com" />
+    <id>http://drewrobb.com/tags/hakyll/index.xml</id>
+    <author>
+        <name>Drew Robb</name>
+        <email>drewrobb@gmail.com</email>
+    </author>
+    <updated>2013-05-15T00:00:00Z</updated>
+    <entry>
+    <title>Hakyll Beginnings</title>
+    <link href="http://drewrobb.com/posts/hakyll/intro.md/" />
+    <id>http://drewrobb.com/posts/hakyll/intro.md/</id>
+    <published>2013-05-15T00:00:00Z</published>
+    <updated>2013-05-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<article>
+  <header>
+    <h1 class="entry-title">
+      <a href="/posts/hakyll/intro.md/">Hakyll Beginnings</a>
+    </h1>
+    <div class="meta">
+      <time datetime="2013-05-15" pubdate data-updated="true">15 May 2013</time>
+      <div class="tags"><a href="/tags/hakyll/index.html">hakyll</a> | <a href="/tags/programming/index.html">programming</a> | <a href="/tags/blog/index.html">blog</a></div>
+    </div>
+  </header>
+
+  <h3 id="why-hakyll">Why Hakyll</h3>
+<ul>
+<li>I like to have complete control of the systems I use</li>
+<li>I dislike monolithic frameworks</li>
+<li>Static site generators are awesome</li>
+<li>Haskell is my favorite programming language, and I would like to use it more.</li>
+</ul>
+<h3 id="getting-started">Getting Started</h3>
+<p>I pulled code from a few different example hakyll sites and examples and scrubbed everything I didn’t need. The site design and CSS are subject to complete refactor. I’m horrible at design and it takes me many iterations to get something OK looking.</p>
+<h3 id="github-pages-setup">Github Pages Setup</h3>
+<p>This was super easy:</p>
+<ul>
+<li>Point A Record of drewrobb.com at github</li>
+<li>add CNAME file in master branch with drewrobb.com</li>
+<li>create gh-pages branch that will before served site root</li>
+<li>symlink hakyll build output directory (_site) to gh-pages checkout</li>
+<li>push to gh-pages to publish site</li>
+<li>push to master to publish site source code</li>
+<li>make clean.sh script since hakyll clean will delete the entire _site subdirectory (including .git)</li>
+</ul>
+<h3 id="immediate-todos">Immediate TODOs:</h3>
+<ul>
+<li>CSS, HTML, Design</li>
+<li>Better support for photo integration (possibly with support for a 3rd party site)</li>
+<li>An actual name for this?</li>
+</ul>
+<h3 id="compilation-optimization">Compilation Optimization:</h3>
+<p>Compiling took 4.8 seconds, and the binary is 60MB!</p>
+<pre><code>time ghc --make  site.hs
+[1 of 1] Compiling Main             ( site.hs, site.o )
+Linking site ...
+ghc --make site.hs  4.28s user 0.51s system 99% cpu 4.823 total</code></pre>
+<p>It turns out that ghc does static linking to hakyll and its dependencies by default. This is nice in that it creates a more portable binary, but the cost of compile time is too large. Dynamic linking can be enabled in ghc with the dynamic flag. However, cabal installed packages seem to not support this by default:</p>
+<pre><code> site.hs:19:8:
+     Could not find module `Hakyll&#39;
+     Perhaps you haven&#39;t installed the &quot;dyn&quot; libraries for package `hakyll-3.4.1.0&#39;?
+     Use -v to see a list of the files searched for.</code></pre>
+<p>This requires a simple rebuild to support dynamic linking.</p>
+<pre><code>cabal install --reinstall --enable-shared hakyll</code></pre>
+<p>You might have to also reinstall other cabal dependencies, or just start over as I did.</p>
+<p>Finally,</p>
+<pre><code>time ghc --make  -dynamic site.hs
+[1 of 1] Compiling Main             ( site.hs, site.o )
+Linking site ...
+ghc --make -dynamic site.hs  1.10s user 0.13s system 98% cpu 1.257 total</code></pre>
+<p>It was almost 4 times faster, and the binary is now only 116kB. Success.</p>
+</article>
+]]></summary>
+</entry>
+
+</feed>

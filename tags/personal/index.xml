@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>drewrobb.com: Posts tagged personal</title>
+    <link href="http://drewrobb.com/tags/personal/index.xml" rel="self" />
+    <link href="http://drewrobb.com" />
+    <id>http://drewrobb.com/tags/personal/index.xml</id>
+    <author>
+        <name>Drew Robb</name>
+        <email>drewrobb@gmail.com</email>
+    </author>
+    <updated>2013-06-07T00:00:00Z</updated>
+    <entry>
+    <title>One Year of Running</title>
+    <link href="http://drewrobb.com/posts/one/year/running.md/" />
+    <id>http://drewrobb.com/posts/one/year/running.md/</id>
+    <published>2013-06-07T00:00:00Z</published>
+    <updated>2013-06-07T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<article>
+  <header>
+    <h1 class="entry-title">
+      <a href="/posts/one/year/running.md/">One Year of Running</a>
+    </h1>
+    <div class="meta">
+      <time datetime="2013-06-07" pubdate data-updated="true"> 7 June 2013</time>
+      <div class="tags"><a href="/tags/running/index.html">running</a> | <a href="/tags/personal/index.html">personal</a></div>
+    </div>
+  </header>
+
+  <p>About one year ago, for the first time in recent memory, I went on a run. I now have a lot of running data! I also almost always run with a heartrate monitor.</p>
+<p>The graph below represents my progress. Each point is a single run that was between 3 and 8 miles without signficant elevation gain and with a reasonably low standard deviation in pace. For each run, I calculate my mean pace over all 1 mile continuous subsections of the run where my mean heart rate was within the range [165, 180] (typical moderate-hard effort for me). This gives a crude measurement of the pace that I’m able to sustain at a given heart rate.</p>
+<figure>
+<img src="/images/pace_running_regression.png" />
+</figure>
+<p>There are only about 50 runs shown, because I don’t always have a heart rate monitor, and I’ve filtered many of the runs. A simple linear fit of the data gives a slope of ~1.7 seconds/(week * mile). I’m getting faster by almost two seconds a mile every week. You might also notice that 45ish weeks is less than a year, this is because I did not record data initially.</p>
+</article>
+]]></summary>
+</entry>
+
+</feed>
