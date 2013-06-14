@@ -11,14 +11,14 @@
     <updated>2013-05-15T00:00:00Z</updated>
     <entry>
     <title>Hakyll Beginnings</title>
-    <link href="http://drewrobb.com/posts/hakyll/intro.md/" />
-    <id>http://drewrobb.com/posts/hakyll/intro.md/</id>
+    <link href="http://drewrobb.com/posts/hakyll-intro/" />
+    <id>http://drewrobb.com/posts/hakyll-intro/</id>
     <published>2013-05-15T00:00:00Z</published>
     <updated>2013-05-15T00:00:00Z</updated>
     <summary type="html"><![CDATA[<article>
   <header>
     <h1 class="entry-title">
-      <a href="/posts/hakyll/intro.md/">Hakyll Beginnings</a>
+      <a href="/posts/hakyll-intro/">Hakyll Beginnings</a>
     </h1>
     <div class="meta">
       <time datetime="2013-05-15" pubdate data-updated="true">15 May 2013</time>
